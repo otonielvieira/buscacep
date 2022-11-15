@@ -1,16 +1,37 @@
 .App {
   text-align: center;
+
 }
 
 .App-logo {
-  height: 10vmin;
+
+  height: 15vmin;
   pointer-events: none;
+}
+
+.App-input{
+  height: 20px;
+  width: 150px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.App-button{
+  color: #282c34;
+  height: 30px;
+  width: 150px;
+  font-weight: 100;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+span{
+  color: red;
+  margin: 1px;
 }
 
 .App-header {
@@ -36,3 +57,5 @@
     transform: rotate(360deg);
   }
 }
+
+
