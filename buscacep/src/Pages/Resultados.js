@@ -2,7 +2,7 @@ function Resultados(props) {
     const result = props.result;
     const keys = Object.keys(result);
     const elements = keys.map(key => (
-        <span className="App-span" key={key}><b>{key} :</b>{result[key]}</span>
+        <span className="App-span" key={key}><b>{key} :</b> {result[key]}</span>
     ));
 
     return (

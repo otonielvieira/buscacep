@@ -2,6 +2,7 @@
 function Pesquisa() {
     return (
       <>
+     
           <h1>BUSCA CEP</h1>
           <p>
             QuaL<code> CEP</code> você deseja consultar ?
