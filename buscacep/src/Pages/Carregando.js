@@ -1,10 +1,10 @@
-function Carregando() {
+function Carregando(props) {
     return (
       <>
           <p>
             Carregando resultados ...
           </p>
-          <button className="App-button">CANCELAR</button>
+          <button onClick={()=> props.goTo("PESQUISA")} className="App-button">CANCELAR</button>
       </>
     );
   }

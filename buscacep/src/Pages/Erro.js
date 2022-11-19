@@ -7,7 +7,7 @@ function Erro(props) {
 
             <p>{props.errorMessage}</p>
 
-            <button className="App-button">CANCELAR</button>
+            <button onClick={()=> props.goTo("PESQUISA")} className="App-button">VOLTAR</button>
         </>
     );
 }

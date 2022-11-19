@@ -1,5 +1,23 @@
+import { useState } from "react";
 
-function Pesquisa() {
+function mascaraInput(str){
+  return str.replace(/\D/g, '')
+  .replace(/(\d{5})(\d)/, '$1-$2')
+  .replace(/(-\d{3})\d+?$/, '$1')
+}
+
+function Pesquisa(props) {
+  const goTo = props.goTo
+  const [cepNumber, setCepNumber] = useState("");
+
+  function handelChange(evt){
+    const value = evt.target.value
+    setCepNumber(mascaraInput(value));
+  }
+
+  function clear(){
+    setCepNumber("");
+  }
     return (
       <>
      
@@ -7,8 +25,12 @@ function Pesquisa() {
           <p>
             QuaL<code> CEP</code> você deseja consultar ?
           </p>
-          <input className="App-input" />
-          <button className="App-button">CONSULTAR</button>
+          <p>Estado atual: {cepNumber}</p>
+
+          <input value={mascaraInput(cepNumber)} onChange={handelChange} className="App-input" />
+
+          <button  onClick={()=> goTo("RESULTADOS")} className="App-button">CONSULTAR</button>
+          <button onClick={clear}>Limpar state</button>
        
       </>
     );

@@ -13,7 +13,7 @@ function Resultados(props) {
             {elements}
             <br />
 
-            <button className="App-button">CANCELAR</button>
+            <button onClick={()=> props.goTo("PESQUISA")} className="App-button">CANCELAR</button>
         </>
     );
 }
