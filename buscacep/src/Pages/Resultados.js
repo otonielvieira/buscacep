@@ -8,7 +8,7 @@ function Resultados(props) {
     return (
         <>
             <h3>
-                Resultados para o CEP 16075-420:
+                Resultados para o CEP {result.cep}:
             </h3>
             {elements}
             <br />

@@ -1,10 +1,16 @@
 function Carregando(props) {
+  const goTo = props.goTo;
+  const ticket = props.ticket;
+  function handleCancel(){
+    ticket.current++;
+    goTo("PESQUISA")
+  }
     return (
       <>
           <p>
             Carregando resultados ...
           </p>
-          <button onClick={()=> props.goTo("PESQUISA")} className="App-button">CANCELAR</button>
+          <button onClick={handleCancel} className="App-button">CANCELAR</button>
       </>
     );
   }
